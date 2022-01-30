@@ -1,0 +1,152 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(../img/fondo.jpg);
+}
+
+.navegacion{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;   
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
+    display: block;
+    padding: 10px 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.subMenu{
+    position: absolute;
+    font-weight: bold;
+    text-decoration: none;
+    display: none;
+    width: 100%;
+}
+.subMenu li a{
+    display: block;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+}
+
+.menu li:hover .subMenu{
+    display: block;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.footer{
+    margin-top: 620px;
+}
+
+
+footer ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 5px;
+}
+
+
+.imgInicio{
+    width: 100%;
+}
+
+.menuMaterias{
+    text-align: center;
+}
+/*main ul li:hover{
+    font-weight: bold;
+}*/
+
+i{
+    color: black;
+}
+
+/*i:hover{
+    color: white
+}
+
+.navegacion ul li:hover{
+    text-decoration-line: underline;
+}*/
+
+
+
+/* grid de pagina galeria*/
+.contenedor{
+    display: grid;
+    grid-template-areas: "header header"
+                        "main main"
+                        "footer footer";
+}
+
+.headerContendedor{
+    grid-area: header;
+}
+
+.mainContenedor{
+    grid-area: main;
+}
+
+.footerContenedor{
+    grid-area: footer;
+}
+
+/* grid de pagina index*/
+.contenedorIndex{
+    display: grid;
+    grid-template-areas: "header header"
+                        "main main"
+                        "footer footer";
+}
+
+.headerIndex{
+    grid-area: header;
+}
+
+.mainIndex{
+    grid-area: main;
+}
+
+.footerIndex{
+    grid-area: footer;
+}
+
+ 
+/* responsive*/
+@media screen and (min-width: 320px) and (max-width: 400px) {
+    .menu > li > a{
+        padding: 0px;
+    }
+    .imgInicio{
+        margin-top: 30px;
+    }
+    fieldset{
+        margin-top: 20px;
+    }
+}
+
